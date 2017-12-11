@@ -22,9 +22,6 @@ The goals / steps of this project are the following:
 [image2]: ./examples/track1-forward.png "Track1 Forward"
 [image3]: ./examples/track1-backward.png "Track1 Backward"
 [image4]: ./examples/track2-forward.png "Track2 Forward"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -56,9 +53,9 @@ The model.py file contains the code for training and saving the convolution neur
 
 I used nVidia CNN architecture for this project. I referred the same in nVidia paper "End to End Learning for Self-Driving Cars".
 
-_________________________________________________________________
+________________________________________________________________
 Layer (type)                 Output Shape              Param #   
-=================================================================
+________________________________________________________________
 lambda_1 (Lambda)            (None, 160, 320, 3)       0         
 _________________________________________________________________
 cropping2d_1 (Cropping2D)    (None, 90, 320, 3)        0         
@@ -79,10 +76,10 @@ dense_1 (Dense)              (None, 100)               844900
 _________________________________________________________________
 dense_2 (Dense)              (None, 50)                5050      
 _________________________________________________________________
-dense_3 (Dense)              (None, 10)                510       
+dense_3 (Dense)              (None, 10)                510
 _________________________________________________________________
 dense_4 (Dense)              (None, 1)                 11        
-=================================================================
+_________________________________________________________________
 Total params: 981,819
 Trainable params: 981,819
 Non-trainable params: 0
