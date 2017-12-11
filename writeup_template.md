@@ -19,9 +19,9 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/cnn-architecture.png "Nvidia Model"
-[image2]: ./examples/track1-forward.png "Track1 Forward"
-[image3]: ./examples/track1-backward.png "Track1 Backward"
-[image4]: ./examples/track2-forward.png "Track2 Forward"
+[image2]: ./examples/track1-forward.jpg "Track1 Forward"
+[image3]: ./examples/track1-backward.jpg "Track1 Backward"
+[image4]: ./examples/track2-forward.jpg "Track2 Forward"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -53,37 +53,23 @@ The model.py file contains the code for training and saving the convolution neur
 
 I used nVidia CNN architecture for this project. I referred the same in nVidia paper "End to End Learning for Self-Driving Cars".
 
-________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-________________________________________________________________
-lambda_1 (Lambda)            (None, 160, 320, 3)       0         
-_________________________________________________________________
-cropping2d_1 (Cropping2D)    (None, 90, 320, 3)        0         
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 43, 158, 24)       1824      
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 20, 77, 36)        21636     
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 8, 37, 48)         43248     
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 6, 35, 64)         27712     
-_________________________________________________________________
-conv2d_5 (Conv2D)            (None, 4, 33, 64)         36928     
-_________________________________________________________________
-flatten_1 (Flatten)          (None, 8448)              0         
-_________________________________________________________________
-dense_1 (Dense)              (None, 100)               844900    
-_________________________________________________________________
-dense_2 (Dense)              (None, 50)                5050      
-_________________________________________________________________
-dense_3 (Dense)              (None, 10)                510
-_________________________________________________________________
-dense_4 (Dense)              (None, 1)                 11        
-_________________________________________________________________
+|Layer (type)                 |Output Shape              |Param #   
+|lambda_1 (Lambda)            |(None, 160, 320, 3)       |0         
+|cropping2d_1 (Cropping2D)    |(None, 90, 320, 3)        |0         
+|conv2d_1 (Conv2D)            |(None, 43, 158, 24)       |1824      
+|conv2d_2 (Conv2D)            |(None, 20, 77, 36)        |21636     
+|conv2d_3 (Conv2D)            |(None, 8, 37, 48)         |43248     
+|conv2d_4 (Conv2D)            |(None, 6, 35, 64)         |27712     
+|conv2d_5 (Conv2D)            |(None, 4, 33, 64)         |36928     
+|flatten_1 (Flatten)          |(None, 8448)              |0         
+|dense_1 (Dense)              |(None, 100)               |844900    
+|dense_2 (Dense)              |(None, 50)                |5050      
+|dense_3 (Dense)              |(None, 10)                |510
+|dense_4 (Dense)              |(None, 1)                 |11        
+
 Total params: 981,819
 Trainable params: 981,819
 Non-trainable params: 0
-_________________________________________________________________
 
 #### 2. Attempts to reduce overfitting in the model
 
