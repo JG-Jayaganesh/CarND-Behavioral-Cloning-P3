@@ -53,19 +53,20 @@ The model.py file contains the code for training and saving the convolution neur
 
 I used nVidia CNN architecture for this project. I referred the same in nVidia paper "End to End Learning for Self-Driving Cars".
 
-|Layer (type)                 |Output Shape              |Param #   
-|lambda_1 (Lambda)            |(None, 160, 320, 3)       |0         
-|cropping2d_1 (Cropping2D)    |(None, 90, 320, 3)        |0         
-|conv2d_1 (Conv2D)            |(None, 43, 158, 24)       |1824      
-|conv2d_2 (Conv2D)            |(None, 20, 77, 36)        |21636     
-|conv2d_3 (Conv2D)            |(None, 8, 37, 48)         |43248     
-|conv2d_4 (Conv2D)            |(None, 6, 35, 64)         |27712     
-|conv2d_5 (Conv2D)            |(None, 4, 33, 64)         |36928     
-|flatten_1 (Flatten)          |(None, 8448)              |0         
-|dense_1 (Dense)              |(None, 100)               |844900    
-|dense_2 (Dense)              |(None, 50)                |5050      
+|Layer (type)                 |Output Shape              |Param #
+|------------                 |------------              |--------
+|lambda_1 (Lambda)            |(None, 160, 320, 3)       |0
+|cropping2d_1 (Cropping2D)    |(None, 90, 320, 3)        |0 
+|conv2d_1 (Conv2D)            |(None, 43, 158, 24)       |1824 
+|conv2d_2 (Conv2D)            |(None, 20, 77, 36)        |21636
+|conv2d_3 (Conv2D)            |(None, 8, 37, 48)         |43248 
+|conv2d_4 (Conv2D)            |(None, 6, 35, 64)         |27712 
+|conv2d_5 (Conv2D)            |(None, 4, 33, 64)         |36928 
+|flatten_1 (Flatten)          |(None, 8448)              |0 
+|dense_1 (Dense)              |(None, 100)               |844900 
+|dense_2 (Dense)              |(None, 50)                |5050
 |dense_3 (Dense)              |(None, 10)                |510
-|dense_4 (Dense)              |(None, 1)                 |11        
+|dense_4 (Dense)              |(None, 1)                 |11 
 
 Total params: 981,819
 Trainable params: 981,819
@@ -75,7 +76,7 @@ Non-trainable params: 0
 
 Hence I used nVidia CNN model, I don't want to disturb the architecture. So I didn't touch anything in the architecture.
 
-Instead, I used data where I tried reverse driving and captured the same, that decreases the overfitting a little. Also, I have allocated 20% of data to validation set to capture the better validation error.  
+Instead, I used data where I tried reverse driving and captured the same, that decreases the overfitting a little. Also, I have allocated 20% of data to validation set to capture the better validation error.
 
 #### 3. Model parameter tuning
 
